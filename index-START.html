@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="drum-kit">
+
+    <!-- Cymbals -->
+    <div class="row top-row">
+      <div data-key="83" class="key cymbal-left">
+        <img src="./hinat.jpeg" alt="Hi-hat">
+        <span class="sound">hihat (S)</span>
+      </div>
+      <div data-key="72" class="key cymbal-right">
+        <img src="./ride.jpeg" alt="Ride">
+        <span class="sound">ride (H)</span>
+      </div>
+    </div>
+
+    <!-- Toms + Snare -->
+    <div class="row middle-row">
+      <div data-key="75" class="key tom-left">
+        <img src="./tom.jpeg" alt="Tom">
+        <span class="sound">tom (K)</span>
+      </div>
+      <div data-key="74" class="key snare">
+        <img src="./snare.jpeg" alt="Snare">
+        <span class="sound">snare (J)</span>
+      </div>
+      <div data-key="71" class="key tom-right">
+        <img src="./tom.jpeg" alt="Tom">
+        <span class="sound">boom (G)</span>
+      </div>
+    </div>
+
+    <!-- Kick + Others -->
+    <div class="row bottom-row">
+      <div data-key="65" class="key clap">
+        <img src="./clap.jpeg" alt="Clap">
+        <span class="sound">clap (A)</span>
+      </div>
+      <div data-key="68" class="key kick">
+        <img src="./kick.jpeg" alt="Kick">
+        <span class="sound">kick (D)</span>
+      </div>
+      <div data-key="70" class="key openhat">
+        <img src="./openhat.jpeg" alt="Openhat">
+        <span class="sound">openhat (F)</span>
+      </div>
+      <div data-key="76" class="key tink">
+        <img src="./tink.jpeg" alt="Tink">
+        <span class="sound">tink (L)</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Audio files -->
+  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="83" src="sounds/hihat.wav"></audio>
+  <audio data-key="68" src="sounds/kick.wav"></audio>
+  <audio data-key="70" src="sounds/openhat.wav"></audio>
+  <audio data-key="71" src="sounds/boom.wav"></audio>
+  <audio data-key="72" src="sounds/ride.wav"></audio>
+  <audio data-key="74" src="sounds/snare.wav"></audio>
+  <audio data-key="75" src="sounds/tom.wav"></audio>
+  <audio data-key="76" src="sounds/tink.wav"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* === Background === */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: url("./background.jpg") no-repeat center center;
+  background-size: cover; /* full coverage */
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Drum Kit Layout */
+.drum-kit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 1;
+}
+
+/* Row layout */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Key Pad Styles */
+.key {
+  border: 0.2rem solid #fff;
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  user-select: none;
+  box-shadow: inset 0 0 0.8rem rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.key img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  margin-bottom: 0.3rem;
+  pointer-events: none;
+}
+
+.key.playing {
+  transform: scale(1.15);
+  border-color: #ffc600;
+  box-shadow: 0 0 2rem #ffc600;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Special Sizing */
+.kick {
+  width: 8rem;
+  height: 8rem;
+  background: radial-gradient(circle at center, #222, #000);
+}
+
+.cymbal-left, .cymbal-right {
+  width: 7rem;
+  height: 7rem;
+  background: radial-gradient(circle at center, #444, #111);
+}
+
+/* Text */
+.sound {
+  font-size: 0.85rem;
+  color: #ffc600;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
